@@ -43,6 +43,3 @@ def handle_message(data):
         poem += poem_chunk
         time.sleep(0.05)
         emit('receive_poem_stream', {'poem_chunk': poem_chunk, 'emotions': emotion_data})
-
-if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
